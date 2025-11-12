@@ -1,0 +1,17 @@
+.reportes-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.report-card {
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(19,19,21,0.06);
+}
+
+/* En móviles, separar mejor las tarjetas de gráficos */
+@media (max-width: 720px) {
+  .reportes-page {
+    padding: 12px;
+  }
+}

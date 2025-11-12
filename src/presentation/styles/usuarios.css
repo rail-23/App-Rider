@@ -1,0 +1,15 @@
+.usuarios-page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Responsive: mejorar scroll de la tabla en mobile */
+@media (max-width: 720px) {
+  .usuarios-page table thead th {
+    font-size: 0.75rem;
+  }
+  .usuarios-page table tbody td {
+    font-size: 0.85rem;
+  }
+}

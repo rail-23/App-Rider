@@ -1,0 +1,127 @@
+/* ===== Login styles (azul) ===== */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 100%), linear-gradient(180deg, #f3f7ff 0%, #eaf4ff 60%);
+  padding: 24px;
+  position: relative;
+}
+
+.login-center {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.login-logo {
+  width: 96px;
+  height: auto;
+  display: block;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.06);
+  padding: 6px;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.12);
+}
+
+.login-card {
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 12px 40px rgba(16,24,40,0.06);
+  border: 1px solid rgba(11,12,13,0.04);
+  backdrop-filter: blur(4px);
+}
+
+.login-hero {
+  padding: 22px 20px;
+  background: linear-gradient(135deg, #1e40af 0%, #60a5fa 100%);
+  color: white;
+  text-align: center;
+}
+
+.login-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.login-sub {
+  margin: 6px 0 0 0;
+  opacity: 0.95;
+  font-size: 0.95rem;
+}
+
+.login-body {
+  padding: 18px 18px 22px 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(250,250,250,1));
+}
+
+.form-error {
+  color: #b91c1c;
+  background: rgba(185,28,28,0.05);
+  border: 1px solid rgba(185,28,28,0.08);
+  padding: 8px 10px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* Gradient del botón dentro del login */
+.login-card .btn-gradient {
+  background: linear-gradient(135deg, #1e40af 0%, #60a5fa 100%);
+  box-shadow: 0 8px 20px rgba(37,99,235,0.12);
+}
+.login-card .btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(37,99,235,0.12);
+}
+
+/* Fondos decorativos */
+.login-page::before,
+.login-page::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  filter: blur(56px);
+  opacity: 0.45;
+  z-index: 1;
+}
+.login-page::before { /* mancha azul izquierda */ }
+.login-page::after {  /* mancha azul derecha */ }
+
+.login-page .pattern {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
+                    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mix-blend-mode: overlay;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Responsive login */
+@media (max-width: 480px) {
+  .login-page {
+    padding: 14px;
+    background: linear-gradient(180deg, #f7fbff 0%, #fffaf6 60%);
+  }
+  .login-card {
+    box-shadow: 0 8px 20px rgba(16,24,40,0.04);
+    border-radius: 12px;
+  }
+  .login-center > .login-logo {
+    margin-bottom: 12px;
+    width: 80px;
+    height: 80px;
+  }
+  .login-title {
+    font-size: 1.25rem;
+  }
+}

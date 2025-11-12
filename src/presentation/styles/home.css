@@ -1,0 +1,54 @@
+/* Página Home / Dashboard */
+.home-page {
+  /* en JSX ya tienes p-4 sm:p-6 lg:p-8 max-w-7xl mx-auto,
+     esto solo refuerza fondo si quieres */
+  background: var(--bg);
+}
+
+/* Tarjetas de métricas */
+.home-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+/* Distribución por categoría */
+.home-distrib {
+  grid-column: 1 / -1; /* que se extienda en pantallas grandes */
+}
+
+/* Tabla de usuarios recientes */
+.home-recent {
+  margin-top: 10px;
+}
+
+/* Columna que se oculta en mobile (la usas en <th className="hide-sm">Fecha</th>) */
+.hide-sm {
+  /* por defecto visible, la escondemos más abajo en mobile */
+}
+
+/* 📱 Responsive Home */
+@media (max-width: 720px) {
+  .home-page {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .home-metrics {
+    grid-template-columns: 1fr;
+  }
+  .home-distrib {
+    order: 3;
+  }
+  .home-page h2 {
+    font-size: 1.25rem;
+  }
+  .hide-sm {
+    display: none !important;
+  }
+}
+
+@media (min-width: 721px) {
+  .hide-sm {
+    display: table-cell !important;
+  }
+}
